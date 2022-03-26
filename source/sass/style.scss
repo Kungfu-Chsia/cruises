@@ -1,0 +1,15 @@
+//global
+@import "/source/sass/global/normalize.css";
+@import "global/variables.scss";
+@import "global/fonts.scss";
+@import "global/global.scss";
+@import "global/mixins.scss";
+//blocks
+@import "blocks/page-header.scss";
+@import "blocks/main-na.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/journey.scss";
+@import "blocks/advantages.scss";
+@import "blocks/cruises.scss";
+@import "blocks/contacts.scss";
+@import "blocks/reservation.scss";

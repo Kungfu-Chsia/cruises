@@ -1,0 +1,140 @@
+.cruises h2 {
+  text-align: center;
+  padding-top: 120px;
+  margin-bottom: 60px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 100px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    padding-top: 65px;
+    margin-bottom: 40px;
+  }
+}
+
+.cruises__container {
+  padding: 0 30px;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    padding: 0 25px;
+  }
+}
+
+.cruises__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  padding-bottom: 120px;
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    padding-bottom: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.cruises__card {
+  position: relative;
+}
+
+.cruises__card span {
+  display: block;
+  color: $light-grey;
+  position: absolute;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  bottom: 0;
+}
+
+.cruises__details {
+  background-color: $main-blue;
+  position: absolute;
+  max-width: 260px;
+  max-height: 386px;
+  padding: 0 25px;
+  width: 100%;
+  display: none;
+  top: 0;
+  z-index: 3;
+  overflow-y: scroll;
+  height: 100%;
+
+  @media (max-width: $tablet-width) {
+    max-width: 309px;
+  }
+
+  & h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    color: $light-grey;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+
+  & p {
+    color: $light-grey;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    padding-bottom: 7px;
+  }
+
+  & span {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+    color: $light-grey;
+    padding-bottom: 16px;
+  }
+}
+
+.cruises__details span:last-child {
+  padding-bottom: 30px;
+}
+
+.cruises__details-button {
+  color: $main-blue;
+  background-color: $light-grey;
+  padding: 10px 0;
+  text-align: center;
+  margin-bottom: 35px;
+  display: block;
+  max-width: 210px;
+  width: 100%;
+
+
+  @media (max-width: $tablet-width) {
+    max-width: 239px;
+  }
+}
+
+
+.cruises__wrap {
+  position: relative;
+
+  &:hover .cruises__details {
+    display: block;
+  }
+}

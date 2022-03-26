@@ -1,0 +1,52 @@
+.page-header {
+  height: 638px;
+  background: $bg-blue url("../img/header-bg-l.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 100%;
+}
+
+.page-header__intro {
+  padding-left: 95px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 45px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    padding-left: 15px;
+  }
+}
+
+.page-header h1 {
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  color: $light-grey;
+
+  @media (max-width: $tablet-width) {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+.page-header p {
+  font-size: 20px;
+  line-height: 24px;
+  color: $light-grey;
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

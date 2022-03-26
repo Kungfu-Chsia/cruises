@@ -1,0 +1,53 @@
+.journey__container {
+  display: flex;
+  padding-top: 120px;
+  margin-bottom: 120px;
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    flex-direction: column;
+  }
+}
+
+.journey__wrapper h2 {
+  padding-top: 46px;
+  padding-bottom: 40px;
+
+  @media (max-width: 1044px) {
+    padding-top: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 30px;
+    padding-right: 98px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    padding-right: 63px;
+  }
+}
+
+.journey__wrapper {
+  max-width: 512px;
+  margin-right: 88px;
+  width: 50%;
+
+  @media (max-width: $tablet-width) {
+    max-width: 324px;
+    margin-right: 30px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    max-width: 290px;
+    width: 100%;
+  }
+}
+
+.journey__wrapper p {
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    margin-bottom: 40px;
+  }
+}

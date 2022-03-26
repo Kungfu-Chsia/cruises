@@ -1,0 +1,136 @@
+.advantages {
+  min-height: 562px;
+  background: $bg-blue url("../img/advant-bg-l.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  @media (max-width: $tablet-width) {
+    min-height: 588px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    min-height: 997px;
+  }
+}
+
+.advantages__container h2 {
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 60px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 100px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    padding-top: 65px;
+    padding-bottom: 40px;
+  }
+}
+
+.advantages__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 120px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 65px;
+  }
+}
+
+.advantages__card {
+  max-width: 360px;
+  width: 30%;
+  background-color: $light-grey;
+  margin-right: 4%;
+  padding-left: 30px;
+  padding-right: 15px;
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 206px;
+    padding-left: 20px;
+    margin-right: 5%;
+    padding-right: 16px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    max-width: 290px;
+    margin-bottom: 30px;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.advantages__card h3 {
+  font-size: 18px;
+  line-height: 27px;
+  padding-top: 87px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 76px;
+    line-height: 25px;
+  }
+}
+
+.advantages__card p {
+  font-size: 14px;
+  line-height: 20px;
+  padding-bottom: 30px;
+  max-width: 229px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 25px;
+  }
+}
+
+.advantages__icon-ship {
+  position: absolute;
+  fill: $main-blue;
+  top: 30px;
+
+  @media (max-width: $tablet-width) {
+    top: 30px;
+    width: 21px;
+    height: 26px;
+  }
+}
+
+.advantages__icon-ticks {
+  position: absolute;
+  fill: $main-blue;
+  top: 35px;
+
+  @media (max-width: $tablet-width) {
+    top: 29px;
+    width: 33px;
+    height: 19px;
+  }
+}
+
+.advantages__icon-boat {
+  position: absolute;
+  fill: $main-blue;
+  top: 38px;
+
+  @media (max-width: $tablet-width) {
+    top: 32px;
+    width: 38px;
+    height: 13px;
+  }
+}

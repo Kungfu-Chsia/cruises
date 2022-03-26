@@ -1,0 +1,97 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  max-width: 1366px;
+  min-width: 320px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $main-blue;
+  text-transform: none;
+  min-height: 100%;
+  background: $white;
+  text-align: start;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list-style {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1190px;
+  box-sizing: border-box;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    padding: 0 45px;
+    max-width: 768px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    padding: 0 15px;
+    max-width: none;
+  }
+}
+
+.text,
+.title {
+  margin: 0;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 26px;
+    line-height: 40px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,258 @@
+.main-nav__menu-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 35px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 30px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    padding-top: 20px;
+  }
+}
+
+
+.main-nav__list {
+  @include list-style;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  // @media (max-width: $tablet-width) {
+  //   flex-direction: row;
+  // }
+}
+
+.main-nav__item:last-child a {
+  margin-right: 0;
+}
+
+.main-nav__icon-logo {
+  fill: $light-grey;
+  width: 70;
+  height: 38;
+
+  @media (max-width: $tablet-width) {
+    width: 38px;
+    height: 20px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    width: 42px;
+    height: 22px;
+  }
+}
+
+.main-nav {
+  margin-bottom: 210px;
+  position: relative;
+
+  // Styles with js - closed
+  &--closed {
+    .main-nav__list {
+      @include list-style;
+      display: none;
+    }
+
+    .main-nav__toggle {
+      background-color: transparent;
+      right: 15px;
+      top: 25px;
+    }
+
+    .main-nav__icon-burger {
+      position: absolute;
+      fill: $light-grey;
+    }
+
+    .main-nav__item--logo .main-nav__logo {
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
+  }
+
+  // Styles with js - opened
+  &--opened {
+    .main-nav__list {
+      @include list-style;
+      position: absolute;
+      background-color: $white;
+      flex-direction: column;
+      padding-top: 20px;
+      padding-bottom: 311px;
+      z-index: 20;
+      min-width: 285px;
+      width: 90%;
+      right: 0;
+      top: 0;
+
+      @media (min-width: $tablet-width) {
+        background-color: transparent;
+        flex-direction: row;
+        padding: 0;
+        width: auto;
+      }
+    }
+
+    .main-nav__icon-logo {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+      }
+    }
+
+    .main-nav__item--logo .main-nav__logo {
+      @media (min-width: $tablet-width) {
+        display: none;
+      }
+    }
+
+    .main-nav__toggle {
+      background-color: transparent;
+    }
+
+    .main-nav__toggle::before,
+    .main-nav__toggle::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 23px;
+      height: 2px;
+      background-color: $main-blue;
+      left: 1px;
+    }
+
+    .main-nav__toggle::before {
+      transform: rotate(45deg) translateY(-50%);
+    }
+
+    .main-nav__toggle::after {
+      transform: rotate(-45deg) translateY(-50%);
+      left: 2px;
+    }
+  }
+
+  // Styles without js
+  &--nojs {
+    .main-nav__list {
+      @include list-style;
+      display: flex;
+      position: static;
+      background-color: $white;
+    }
+
+    .main-nav__wrapper {
+      display: none;
+    }
+  }
+
+  // Reset mobile styles
+  &--closed,
+  &--opened,
+  &--nojs {
+    @media (min-width: $tablet-width) {
+      .main-nav__wrapper {
+        display: block;
+      }
+
+      .main-nav__list {
+        position: static;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.main-nav__wrapper {
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 21;
+
+  @media (min-width: $desktop-width) {
+    min-height: 2px;
+  }
+}
+
+.main-nav__logo {
+  @media (min-width: $desktop-width) {
+    padding-top: 39px;
+  }
+}
+
+.main-nav__item--button {
+  text-align: start;
+
+  & a {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $main-blue;
+    margin-bottom: 28px;
+    display: block;
+    padding-left: 25px;
+
+    &:hover {
+      color: $bg-blue;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+    margin-right: 23px;
+
+    & a {
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 500;
+      color: $light-grey;
+    }
+
+    & a:active {
+      opacity: 0.3;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 33px;
+
+    & a {
+      font-size: 16px;
+      line-height: 20px;
+      color: $light-grey;
+    }
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
