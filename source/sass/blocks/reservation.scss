@@ -40,6 +40,7 @@
 }
 
 .reservation__text h2 {
+  margin: 0;
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
@@ -64,6 +65,7 @@
 }
 
 .reservation__text p {
+  margin: 0;
   font-size: 18px;
   line-height: 27px;
   max-width: 352px;
@@ -81,10 +83,11 @@
   }
 }
 
-.reservation__form {
+.reservation__form form {
   background-color: $main-blue;
   padding: 0 50px;
   max-width: 403px;
+  margin-bottom: 50px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 100px;
@@ -98,6 +101,7 @@
 }
 
 .reservation__form h3 {
+  margin: 0;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -144,6 +148,7 @@
 }
 
 .reservation__personal p {
+  margin: 0;
   color: $light-grey;
   font-size: 10px;
   line-height: 13px;
