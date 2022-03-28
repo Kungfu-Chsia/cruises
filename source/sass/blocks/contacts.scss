@@ -14,6 +14,7 @@
     align-items: center;
     margin-bottom: 65px;
     padding-top: 0;
+    padding: 0 15px;
   }
 }
 
@@ -44,12 +45,14 @@
     width: 50%;
     margin-right: 30px;
     max-width: 324px;
-    max-height: 334px;
+    height: 335px;
   }
 
   @media (min-width: $mobile-width) and (max-width: 600px) {
     width: 100%;
     margin-right: 0;
+    max-width: 290px;
+    height: 316px;
   }
 }
 

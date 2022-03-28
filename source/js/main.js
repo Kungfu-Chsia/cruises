@@ -22,7 +22,7 @@ const checkNumber = () => {
 };
 
 if (formContactsInput !== null) {
-  formContactsInput.addEventListener('change', checkNumber);
+  formContactsInput.addEventListener('input', checkNumber);
 };
 
 
@@ -80,7 +80,7 @@ const checkMail = () => {
 };
 
 if (formContactsInput !== null) {
-  formContactsEmail.addEventListener('change', checkMail);
+  formContactsEmail.addEventListener('input', checkMail);
 };
 
 //** burger **//

@@ -21,6 +21,10 @@ body {
   min-height: 100%;
   background: $white;
   text-align: start;
+  margin: 0;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  position: relative;
 }
 
 img {
