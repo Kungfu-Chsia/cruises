@@ -3,13 +3,14 @@
   padding-top: 120px;
   margin-bottom: 120px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     margin-bottom: 100px;
     padding: 0 35px;
     padding-top: 100px;
+    justify-content: center;
   }
 
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     flex-direction: column;
     align-items: center;
     margin-bottom: 65px;
@@ -22,12 +23,12 @@
   max-width: 500px;
   width: 45%;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     width: 50%;
     max-width: 324px;
   }
 
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     order: -1;
     width: 100%;
     padding-top: 65px;
@@ -41,14 +42,14 @@
   width: 52%;
   display: block;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     width: 50%;
     margin-right: 30px;
     max-width: 324px;
     height: 335px;
   }
 
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     width: 100%;
     margin-right: 0;
     max-width: 290px;
@@ -64,13 +65,13 @@
   line-height: 27px;
   margin-bottom: 45px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     padding-top: 72px;
     margin-bottom: 40px;
     max-width: 324px;
   }
 
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     padding-top: 0;
   }
 }
@@ -87,7 +88,7 @@
 .contacts__address br {
   display: none;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     display: block;
   }
 }
@@ -100,7 +101,7 @@
   text-transform: none;
   padding-left: 28px;
 
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     margin-bottom: 43px;
   }
 }

@@ -117,3 +117,28 @@ const burgerMenuItemClick = () => {
 burgerMenuItemList.forEach(btn => {
   btn.addEventListener('click', burgerMenuItemClick);
 });
+
+//* form *//
+function saveForm(form) {
+  const formName = form.id
+  const formData = new FormData(form)
+  const object = {}
+
+  formData.forEach(function(value, key) {
+    object[key] = value
+    })
+
+  console.log(object,'jr')
+  const json = JSON.stringify(object)
+  localStorage.setItem('form['+ formName +']', json)
+  }
+
+  function syncForm(formName) {
+    const form = document.getElementById(formName)
+
+    form.addEventListener('submit', function(event) {
+      saveForm(event.target)
+  })
+  }
+
+  syncForm('registration')

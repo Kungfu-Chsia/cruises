@@ -33,13 +33,14 @@
   gap: 30px;
   padding-bottom: 120px;
 
-  @media (max-width: $tablet-width) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+  @media (max-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
     padding-bottom: 100px;
+    justify-content: center;
   }
 
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     padding-bottom: 65px;
     display: flex;
     flex-direction: column;
@@ -49,6 +50,14 @@
 
 .cruises__card {
   position: relative;
+
+  @media (max-width: $desktop-width) {
+    width: 309px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 270px;
+  }
 }
 
 .cruises__card span {
@@ -77,8 +86,17 @@
   overflow-y: scroll;
   height: 100%;
 
-  @media (max-width: $tablet-width) {
+  &:focus-within {
+    outline-offset: 2px;
+    display: block;
+  }
+
+  @media (max-width: $desktop-width) {
     max-width: 309px;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 270px;
   }
 
   & h3 {
@@ -126,18 +144,31 @@
   display: block;
   max-width: 210px;
   width: 100%;
+  user-select: none;
 
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:focus-within a {
+    outline-offset: 2px;
+    display: block;
+  }
 
   @media (max-width: $tablet-width) {
     max-width: 239px;
   }
 }
 
-
 .cruises__wrap {
   position: relative;
 
   &:hover .cruises__details {
     display: block;
+  }
+
+  &:focus-within .cruises__details {
+    display: block;
+    outline-offset: 2px;
   }
 }

@@ -10,13 +10,13 @@
   fill: $light-grey;
   margin-right: 40px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     margin-right: 25px;
     width: 38px;
     height: 20px;
   }
 
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     width: 42px;
     height: 22px;
   }
@@ -28,7 +28,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     flex-direction: column;
     padding-top: 40px;
   }
@@ -37,7 +37,7 @@
 .page-footer__nav-list {
   display: flex;
 
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     flex-direction: column;
   }
 }
@@ -47,12 +47,13 @@
   display: flex;
   flex-wrap: wrap;
   padding-top: 13px;
+  user-select: none;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     padding-top: 5px;
   }
 
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     flex-direction: column;
     padding-top: 30px;
   }
@@ -65,17 +66,17 @@
   padding-top: 9px;
   align-items: flex-end;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     padding-top: 8px;
   }
 
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     margin-top: 7px;
   }
 }
 
 .page-footer__item {
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     margin-bottom: 23px;
   }
 
@@ -95,7 +96,7 @@
     color: $bg-blue;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     font-size: 12px;
     line-height: 15px;
     margin-right: 23px;
@@ -103,7 +104,7 @@
 }
 
 .page-footer__socal-icon-twt {
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     width: 16px;
     height: 13px;
   }
@@ -120,7 +121,7 @@
     margin-right: 0;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     margin-right: 23px;
   }
 }

@@ -10,7 +10,6 @@ html {
 
 body {
   width: 100%;
-  max-width: 1366px;
   min-width: 320px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
@@ -25,6 +24,7 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   position: relative;
+  min-height: 100vh;
 }
 
 img {
@@ -63,12 +63,12 @@ a {
   padding: 0 15px;
   margin: 0 auto;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     padding: 0 45px;
-    max-width: 768px;
+    max-width: 1160px;
   }
 
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     padding: 0 15px;
     max-width: none;
   }
