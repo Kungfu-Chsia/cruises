@@ -1,3 +1,4 @@
+import './vendor.js';
 //**  tel validation **//
 const formContactsInput = document.getElementById('telephone');
 
@@ -100,7 +101,7 @@ const changeToggle = () => {
 };
 
 if (formContactsInput !== null) {
-burgerToggle.addEventListener('click', changeToggle);
+  burgerToggle.addEventListener('click', changeToggle);
 }
 
 // *menu *//
@@ -112,10 +113,26 @@ const burgerMenuItemClick = () => {
     burgerMenu.classList.remove('main-nav--opened');
     burgerMenu.classList.add('main-nav--closed');
   }
+  //hideModalForm(burgerMenu, 'main-nav--closed','main-nav--opened')
 };
 
 burgerMenuItemList.forEach(btn => {
   btn.addEventListener('click', burgerMenuItemClick);
+});
+
+// ***
+const hideModalForm = (modalForm, classHideAdd, classHideRemove) => {
+  if (modalForm !== null && !modalForm.classList.contains(classHideAdd)) {
+    // modalForm.classList.remove(classHideRemove);
+    // modalForm.classList.add(classHideAdd);
+  }
+};
+
+document.addEventListener('click', (event) => {
+
+  if ( event.target.className != 'main-nav' && event.target.className != 'main-nav__toggle') {
+    hideModalForm(document.querySelector('.main-nav'), 'main-nav--closed','main-nav--opened');
+  }
 });
 
 //* form *//
@@ -128,7 +145,7 @@ function saveForm(form) {
     object[key] = value
     })
 
-  console.log(object,'jr')
+  //console.log(object,'jr')
   const json = JSON.stringify(object)
   localStorage.setItem('form['+ formName +']', json)
   }
@@ -142,3 +159,24 @@ function saveForm(form) {
   }
 
   syncForm('registration')
+
+  //** overlay */
+  document.addEventListener('click', function(e) {
+    let actMenu = document.querySelector('.overlay');
+    //console.log(actMenu,e.target)
+    // console.log(actMenu ,e.target , actMenu.classList)
+    if (actMenu && e.target !== actMenu && !actMenu.classList.contains(e.target)) {
+      // console.log(actMenu && e.target !== actMenu && !actMenu.classList.contains(e.target));
+      console.log("1",actMenu)
+      actMenu.classList.remove('hidden');
+      actMenu.classList.add('active');
+    }
+    if (burgerMenu !== null && !burgerMenu.classList.contains('hidden')) {
+      console.log("2",actMenu)
+      actMenu.classList.remove('active');
+      actMenu.classList.add('hidden');
+  };
+});
+  // window.addEventListener('scroll', (e) => {
+  //   window.scrollTo(0,0);
+  // });

@@ -1,22 +1,30 @@
 .journey__container {
   display: flex;
-  padding-top: 120px;
+  padding-top: 121px;
   margin-bottom: 120px;
+
+  @media (max-width: $desktop-width) {
+    padding-top: 99px;
+    margin-bottom: 53px;
+  }
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
+    padding-top: 68px;
+    margin-bottom: 60px;
   }
 }
 
 .journey__wrapper h2 {
   margin: 0;
-  padding-top: 46px;
-  padding-bottom: 40px;
+  padding-top: 54px;
+  padding-bottom: 26px;
 
   @media (max-width: $desktop-width) {
     padding-top: 0;
-    padding-bottom: 30px;
-    width: 96%;
+    padding-bottom: 9px;
+    width: 91%;
+    margin-top: -10px;
   }
 
   @media (max-width: $tablet-width) {
@@ -45,8 +53,12 @@
   font-size: 16px;
   line-height: 24px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     margin-bottom: 40px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 34px;
   }
 }
 
@@ -54,5 +66,10 @@
   @media (max-width: $desktop-width) {
     min-width: 324px;
     width: 50%;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-width: 290px;
+    width: 100%;
   }
 }

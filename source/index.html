@@ -7,15 +7,16 @@
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" crossorigin>
-  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin="anonymous">
-  <link href="css/style.css" rel="stylesheet" />
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" crossorigin>
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
   <link rel="icon" href="favicon.ico">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 </head>
 
 <body>
+  <div class="overlay hidden"></div>
   <header class="page-header">
-    <nav class="main-nav main-nav--opened main-nav--nojs">
+    <nav class="main-nav main-nav--closed">
       <div class="container">
         <div class="main-nav__menu-wrap">
           <div class="main-nav__wrapper">
@@ -25,7 +26,7 @@
               </svg>
             </a>
             <button class="main-nav__toggle" type="button">
-              <svg class="main-nav__icon-burger" width="24" height="12">
+              <svg class="main-nav__icon-burger" width="25" height="20">
                 <use xlink:href="img/sprite.svg#icon-burger"></use>
               </svg>
               <span class="visually-hidden">Открыть меню</span>
@@ -39,16 +40,16 @@
                     <use xlink:href="img/sprite.svg#icon-logo"></use>
                   </svg>
                 </a>
-                <a href="#advantages" aria-label="подробнее о Преимуществах">Преимущества</a>
+                <a href="#advantages" aria-label="подробнее о Преимуществах" class="js-trigger">Преимущества</a>
               </li>
               <li class="main-nav__item main-nav__item--button">
-                <a href="#destination" aria-label="перейти к Направлениям">Направления</a>
+                <a href="#destination" aria-label="перейти к Направлениям" class="js-trigger">Направления</a>
               </li>
               <li class="main-nav__item main-nav__item--button">
-                <a href="#cruises" aria-label="перейти к круизам">Ближайшие круизы</a>
+                <a href="#cruises" aria-label="перейти к круизам" class="js-trigger">Ближайшие круизы</a>
               </li>
               <li class="main-nav__item main-nav__item--button main-nav__item--margin" >
-                <a href="#contacts" aria-label="посмотреть Контакты">Контакты</a>
+                <a href="#contacts" aria-label="посмотреть Контакты" class="js-trigger">Контакты</a>
               </li>
             </ul>
         </div>
@@ -94,7 +95,7 @@
             <h3>
               <svg class="advantages__icon-ticks" width="38" height="21">
                 <use xlink:href="img/sprite.svg#icon-ticks"></use>
-              </svg>Система все включено</h3>
+              </svg>Система<br> все включено</h3>
               <p class="text">Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.</p>
           </div>
           <div class="advantages__card">
@@ -322,7 +323,7 @@
       <div class="reservation__container container">
         <div class="reservation__text">
           <h2>Раннее бронирование</h2>
-          <p>Забронируйте тур за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
+          <p>Забронируйте тур<br> за&nbsp;3-6 месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
         </div>
         <div class="reservation__form">
           <form id="registration" action="https://echo.htmlacademy.ru/" method="post">
@@ -384,16 +385,16 @@
             </a>
             <ul class="page-footer__list">
               <li class="page-footer__item page-footer__item--button">
-                <a href="#advantages" aria-label="подробнее о Преимуществах">Преимущества</a>
+                <a href="#advantages" aria-label="подробнее о Преимуществах" class="js-trigger">Преимущества</a>
               </li>
               <li class="page-footer__item page-footer__item--button">
-                <a href="#destination" aria-label="перейти к Направлениям">Направления</a>
+                <a href="#destination" aria-label="перейти к Направлениям" class="js-trigger">Направления</a>
               </li>
               <li class="page-footer__item page-footer__item--button">
-                <a href="#cruises" aria-label="перейти к круизам">Ближайшие круизы</a>
+                <a href="#cruises" aria-label="перейти к круизам" class="js-trigger">Ближайшие круизы</a>
               </li>
               <li class="page-footer__item page-footer__item--button page-footer__item--margin" >
-                <a href="#contacts" aria-label="посмотреть Контакты">Контакты</a>
+                <a href="#contacts" aria-label="посмотреть Контакты" class="js-trigger">Контакты</a>
               </li>
             </ul>
           </div>
@@ -429,6 +430,7 @@
       </div>
     </footer>
 
-      <script type="module" src="js/main.js"></script>
+      <script defer src="js/vendor.js" type="module"></script>
+      <script defer src="js/main.js" type="module"></script>
   </body>
 </html>

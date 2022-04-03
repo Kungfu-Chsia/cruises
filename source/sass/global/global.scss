@@ -17,7 +17,6 @@ body {
   font-weight: 400;
   color: $main-blue;
   text-transform: none;
-  min-height: 100%;
   background: $white;
   text-align: start;
   margin: 0;
@@ -64,7 +63,8 @@ a {
   margin: 0 auto;
 
   @media (max-width: $desktop-width) {
-    padding: 0 45px;
+    padding-left: 45px;
+    padding-right: 30px;
     max-width: 1160px;
   }
 
@@ -74,23 +74,36 @@ a {
   }
 }
 
-.section-title h2{
+.section-title h2 {
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     font-size: 26px;
     line-height: 40px;
   }
 
-  @media (min-width: $mobile-width) and (max-width: 600px) {
+  @media (max-width: $tablet-width) {
     font-size: 24px;
     line-height: 36px;
   }
 }
 
-
 .hidden {
   display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 19;
+}
+
+.active {
+  display: block;
 }
