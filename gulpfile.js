@@ -62,13 +62,13 @@ const scripts = () => {
 exports.scripts = scripts;
 
 // //Images
-// const optimizeImage = () => {
-//   return gulp.src("source/img/**/*.{jpg,png,svg}")
-//     .pipe(squoosh())
-//     .pipe(gulp.dest("build/img"))
-// }
+const optimizeImage = () => {
+  return gulp.src("source/img/**/*.{svg}")
+    .pipe(squoosh())
+    .pipe(gulp.dest("build/img"))
+}
 
-// exports.optimizeImage = optimizeImage;
+exports.optimizeImage = optimizeImage;
 
 // const copyImage = () => {
 //   return gulp.src("source/img/**/*.{jpg,png,svg}")
@@ -151,7 +151,7 @@ const watcher = () => {
 const build = gulp.series(
   clean,
   copy,
-  // optimizeImage,
+  optimizeImage,
   gulp.parallel(
     styles,
     html,

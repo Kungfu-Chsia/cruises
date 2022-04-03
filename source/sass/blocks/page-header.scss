@@ -1,6 +1,6 @@
 .page-header {
   height: 650px;
-  background: $bg-blue url("../img/header-bg-l.png");
+  background: $bg-blue url("../img/header-bg-l.webp");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -8,7 +8,7 @@
 
   @media (max-width: $desktop-width) {
     height: 638px;
-    background: $bg-blue url("../img/header-bg-m.png");
+    background: $bg-blue url("../img/header-bg-m.webp");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -17,7 +17,7 @@
 
   @media (max-width: $tablet-width) {
     height: 500px;
-    background: $bg-blue url("../img/header-bg-s.png");
+    background: $bg-blue url("../img/header-bg-s.webp");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;

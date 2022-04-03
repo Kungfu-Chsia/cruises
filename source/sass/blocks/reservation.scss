@@ -18,14 +18,14 @@
 
 .reservation {
   min-height: 555px;
-  background: $bg-blue url("../img/reservation-l.png");
+  background: $bg-blue url("../img/reservation-l.webp");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
 
   @media (max-width: $tablet-width) {
     min-height: 805px;
-    background: $bg-blue url("../img/reservation-m.png");
+    background: $bg-blue url("../img/reservation-m.webp");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -33,7 +33,7 @@
 
   @media (min-width: $mobile-width) and (max-width: 600px) {
     min-height: 760px;
-    background: $bg-blue url("../img/reservation-s.png");
+    background: $bg-blue url("../img/reservation-s.webp");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;

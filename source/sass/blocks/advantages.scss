@@ -1,13 +1,13 @@
 .advantages {
   min-height: 562px;
-  background: $bg-blue url("../img/advant-bg-l.png");
+  background: $bg-blue url("../img/advant-bg-l.webp");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
 
   @media (max-width: $desktop-width) {
     min-height: 588px;
-    background: $bg-blue url("../img/advant-bg-m.png");
+    background: $bg-blue url("../img/advant-bg-m.webp");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -15,7 +15,7 @@
 
   @media (max-width: $tablet-width) {
     min-height: 997px;
-    background: $bg-blue url("../img/advant-bg-s.png");
+    background: $bg-blue url("../img/advant-bg-s.webp");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
