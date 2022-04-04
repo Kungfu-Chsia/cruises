@@ -88,15 +88,24 @@ if (formContactsInput !== null) {
 
 const burgerToggle = document.querySelector('.main-nav__toggle');
 const burgerMenu = document.querySelector('.main-nav');
+const overlay = document.querySelector('.overlay');
 
 const changeToggle = () => {
 
   if (burgerMenu !== null && burgerMenu.classList.contains('main-nav--closed')) {
     burgerMenu.classList.add('main-nav--opened');
     burgerMenu.classList.remove('main-nav--closed');
+    overlay.classList.remove('hidden');
+    overlay.classList.add('active');
+    body.classList.add('overflow-hidden');
+
   } else {
     burgerMenu.classList.remove('main-nav--opened');
     burgerMenu.classList.add('main-nav--closed');
+    overlay.classList.add('hidden');
+    overlay.classList.remove('active');
+    body.classList.remove('overflow-hidden');
+
   }
 };
 
@@ -112,6 +121,9 @@ const burgerMenuItemClick = () => {
   if (burgerMenu !== null && !burgerMenu.classList.contains('main-nav--closed')) {
     burgerMenu.classList.remove('main-nav--opened');
     burgerMenu.classList.add('main-nav--closed');
+    overlay.classList.add('hidden');
+    overlay.classList.remove('active');
+    body.classList.remove('overflow-hidden');
   }
   //hideModalForm(burgerMenu, 'main-nav--closed','main-nav--opened')
 };
@@ -123,8 +135,6 @@ burgerMenuItemList.forEach(btn => {
 // ***
 const hideModalForm = (modalForm, classHideAdd, classHideRemove) => {
   if (modalForm !== null && !modalForm.classList.contains(classHideAdd)) {
-    // modalForm.classList.remove(classHideRemove);
-    // modalForm.classList.add(classHideAdd);
   }
 };
 
@@ -145,7 +155,6 @@ function saveForm(form) {
     object[key] = value
     })
 
-  //console.log(object,'jr')
   const json = JSON.stringify(object)
   localStorage.setItem('form['+ formName +']', json)
   }
@@ -161,22 +170,16 @@ function saveForm(form) {
   syncForm('registration')
 
   //** overlay */
-  document.addEventListener('click', function(e) {
-    let actMenu = document.querySelector('.overlay');
-    //console.log(actMenu,e.target)
-    // console.log(actMenu ,e.target , actMenu.classList)
-    if (actMenu && e.target !== actMenu && !actMenu.classList.contains(e.target)) {
-      // console.log(actMenu && e.target !== actMenu && !actMenu.classList.contains(e.target));
-      console.log("1",actMenu)
-      actMenu.classList.remove('hidden');
-      actMenu.classList.add('active');
-    }
-    if (burgerMenu !== null && !burgerMenu.classList.contains('hidden')) {
-      console.log("2",actMenu)
-      actMenu.classList.remove('active');
-      actMenu.classList.add('hidden');
+  const body = document.body;
+
+  overlay.addEventListener('click', function(e) {
+
+    if (overlay.classList.contains('active')){
+
+      burgerMenu.classList.remove('main-nav--opened');
+      burgerMenu.classList.add('main-nav--closed');
+      overlay.classList.add('hidden');
+      overlay.classList.remove('active');
+      body.classList.remove('overflow-hidden');
   };
 });
-  // window.addEventListener('scroll', (e) => {
-  //   window.scrollTo(0,0);
-  // });
