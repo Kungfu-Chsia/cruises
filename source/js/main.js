@@ -33,7 +33,7 @@ const formContactsInputName = document.getElementById('name');
 const checkNumbers = () => {
 
   const minTitleName = 1;
-  const maxTitleName = 15;
+  const maxTitleName = 45;
 
   const valueLength = formContactsInputName.value.length;
 
@@ -45,7 +45,7 @@ const checkNumbers = () => {
     formContactsInputName.setCustomValidity(`Удалите лишние ${valueLength - maxTitleName} симв.`);
   }
 
-  if (valueLength>0 && !/^[A-Za-zА-Яа-яЁё]+$/.test(formContactsInputName.value))
+  if (valueLength>0 && !/^[ A-Za-zА-Яа-яЁё]+$/.test(formContactsInputName.value))
   {
     formContactsInputName.setCustomValidity(`В имени должны быть только буквы`);
   }

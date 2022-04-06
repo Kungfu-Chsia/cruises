@@ -175,6 +175,10 @@
     max-width: 239px;
     margin-top: 14px;
   }
+
+  @media (max-width: $tablet-width) {
+    max-width: 220px;
+  }
 }
 
 .cruises__wrap {

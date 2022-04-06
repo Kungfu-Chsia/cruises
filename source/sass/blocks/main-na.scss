@@ -4,7 +4,7 @@
   padding-top: 36px;
 
   @media (max-width: $desktop-width) {
-    padding-top: 22px;
+    padding-top: 29px;
   }
 
   @media (max-width: $tablet-width) {
@@ -41,12 +41,12 @@
 }
 
 .main-nav {
-  margin-bottom: 175px;
+  margin-bottom: 170px;
   position: relative;
   user-select: none;
 
   @media (max-width: $desktop-width) {
-    margin-bottom: 189px;
+    margin-bottom: 182px;
   }
 
   @media (max-width: $tablet-width) {
@@ -58,7 +58,11 @@
     .main-nav__list {
       @include list-style;
       display: none;
-      padding-top: 10px;
+      padding-top: 8px;
+
+      @media (max-width: $desktop-width) {
+        padding-top: 3px;
+      }
     }
 
     .main-nav__toggle {
@@ -86,6 +90,9 @@
       position: absolute;
       background-color: $white;
       flex-direction: column;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      height: 100vh;
       padding-top: 20px;
       padding-bottom: 311px;
       z-index: 20;
@@ -97,8 +104,10 @@
       @media (min-width: $tablet-width) {
         background-color: transparent;
         flex-direction: row;
+        flex-wrap: wrap;
         padding: 0;
         width: auto;
+        height: 100%;
       }
     }
 
@@ -124,11 +133,11 @@
     .main-nav__toggle::after {
       content: "";
       position: absolute;
-      top: 50%;
+      top: 47%;
       width: 18px;
       height: 2px;
       background-color: $main-blue;
-      left: 1px;
+      left: 35px;
     }
 
     .main-nav__toggle::before {
@@ -137,7 +146,7 @@
 
     .main-nav__toggle::after {
       transform: rotate(-45deg) translateY(-50%);
-      left: 2px;
+      left: 36px;
     }
   }
 
@@ -152,7 +161,8 @@
       min-width: 285px;
       width: 90%;
       padding-top: 20px;
-      padding-bottom: 311px;
+      padding-bottom: 254px;
+
 
       @media (min-width: $tablet-width) {
         background-color: transparent;
@@ -166,14 +176,24 @@
       display: none;
     }
 
-    .main-nav__menu-wrap {
-      padding-top: 0;
-      margin-right: -15px;
-      justify-content: end;
+    .overlay {
+      display: none;
+    }
 
-      @media (min-width: $tablet-width) {
-        padding-top: 35px;
-        justify-content: space-between;
+    .main-nav__menu-wrap {
+      padding-top: 43px;
+
+      justify-content: space-between;
+
+      @media (max-width: $desktop-width) {
+        padding-top: 31px;
+      }
+
+      @media (max-width: $tablet-width) {
+        justify-content: flex-end;
+        padding-top: 0;
+        right: 0;
+        margin-right: -15px;
       }
     }
   }
@@ -218,15 +238,19 @@
 
   & a {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 16px;
     font-weight: 500;
     color: $main-blue;
-    margin-bottom: 32px;
+    margin-bottom: 38px;
     display: block;
-    padding-left: 21px;
+    padding-left: 23px;
 
     &:hover {
       color: $bg-blue;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 25px;
     }
   }
 
