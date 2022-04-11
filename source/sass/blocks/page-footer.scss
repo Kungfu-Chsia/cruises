@@ -72,9 +72,11 @@
   align-items: flex-end;
   min-width: 110px;
   justify-content: flex-end;
+  max-width: 250px;
 
   @media (max-width: $desktop-width) {
     padding-top: 8px;
+    max-width: 110px;
   }
 
   @media (max-width: $tablet-width) {
