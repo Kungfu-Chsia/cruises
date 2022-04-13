@@ -1,25 +1,29 @@
+/* eslint-disable no-undefined */
+/* eslint-disable prefer-rest-params */
+/* eslint-disable no-shadow */
+/* eslint-disable consistent-return */
 
 
-/*!
+/* !
  * MoveTo - A lightweight scroll animation javascript library without any dependency.
  * Version 1.8.2 (28-06-2019 14:30)
  * Licensed under MIT
  * Copyright 2019 Hasan Aydoğdu <hsnaydd@gmail.com>
  */
 
-"use strict";
+'use strict';
 
-var MoveTo = function () {
+let MoveTo = function () {
   /**
    * Defaults
    * @type {object}
    */
-  var defaults = {
+  let defaults = {
     tolerance: 0,
     duration: 800,
     easing: 'easeOutQuart',
     container: window,
-    callback: function callback() {}
+    callback: function callback() { },
   };
   /**
    * easeOutQuart Easing Function
@@ -45,7 +49,7 @@ var MoveTo = function () {
 
 
   function mergeObject(obj1, obj2) {
-    var obj3 = {};
+    let obj3 = {};
     Object.keys(obj1).forEach(function (propertyName) {
       obj3[propertyName] = obj1[propertyName];
     });
@@ -55,7 +59,7 @@ var MoveTo = function () {
     return obj3;
   }
 
-  ;
+
   /**
    * Converts camel case to kebab case
    * @param  {string} val the value to be converted
@@ -68,7 +72,7 @@ var MoveTo = function () {
     });
   }
 
-  ;
+
   /**
    * Count a number of item scrolled top
    * @param  {Window|HTMLElement} container
@@ -83,7 +87,7 @@ var MoveTo = function () {
     return container.pageYOffset;
   }
 
-  ;
+
   /**
    * MoveTo Constructor
    * @param {object} options Options
@@ -91,11 +95,11 @@ var MoveTo = function () {
    */
 
   function MoveTo() {
-    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-    var easeFunctions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    let options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+    let easeFunctions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     this.options = mergeObject(defaults, options);
     this.easeFunctions = mergeObject({
-      easeOutQuart: easeOutQuart
+      easeOutQuart,
     }, easeFunctions);
   }
   /**
@@ -107,22 +111,22 @@ var MoveTo = function () {
 
 
   MoveTo.prototype.registerTrigger = function (dom, callback) {
-    var _this = this;
+    let _this = this;
 
     if (!dom) {
       return;
     }
 
-    var href = dom.getAttribute('href') || dom.getAttribute('data-target'); // The element to be scrolled
+    let href = dom.getAttribute('href') || dom.getAttribute('data-target'); // The element to be scrolled
 
-    var target = href && href !== '#' ? document.getElementById(href.substring(1)) : document.body;
-    var options = mergeObject(this.options, _getOptionsFromTriggerDom(dom, this.options));
+    let target = href && href !== '#' ? document.getElementById(href.substring(1)) : document.body;
+    let options = mergeObject(this.options, _getOptionsFromTriggerDom(dom, this.options));
 
     if (typeof callback === 'function') {
       options.callback = callback;
     }
 
-    var listener = function listener(e) {
+    let listener = function listener(e) {
       e.preventDefault();
 
       _this.move(target, options);
@@ -142,23 +146,24 @@ var MoveTo = function () {
 
 
   MoveTo.prototype.move = function (target) {
-    var _this2 = this;
+    let _this2 = this;
 
-    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+    // eslint-disable-next-line no-undefined
+    let options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
     if (target !== 0 && !target) {
       return;
     }
 
     options = mergeObject(this.options, options);
-    var distance = typeof target === 'number' ? target : target.getBoundingClientRect().top;
-    var from = countScrollTop(options.container);
-    var startTime = null;
-    var lastYOffset;
+    let distance = typeof target === 'number' ? target : target.getBoundingClientRect().top;
+    let from = countScrollTop(options.container);
+    let startTime = null;
+    let lastYOffset;
     distance -= options.tolerance; // rAF loop
 
-    var loop = function loop(currentTime) {
-      var currentYOffset = countScrollTop(_this2.options.container);
+    let loop = function loop(currentTime) {
+      let currentYOffset = countScrollTop(_this2.options.container);
 
       if (!startTime) {
         // To starts time from 1, we subtracted 1 from current time
@@ -167,7 +172,7 @@ var MoveTo = function () {
         startTime = currentTime - 1;
       }
 
-      var timeElapsed = currentTime - startTime;
+      let timeElapsed = currentTime - startTime;
 
       if (lastYOffset) {
         if (distance > 0 && lastYOffset > currentYOffset || distance < 0 && lastYOffset < currentYOffset) {
@@ -177,7 +182,7 @@ var MoveTo = function () {
 
       lastYOffset = currentYOffset;
 
-      var val = _this2.easeFunctions[options.easing](timeElapsed, from, distance, options.duration);
+      let val = _this2.easeFunctions[options.easing](timeElapsed, from, distance, options.duration);
 
       options.container.scroll(0, val);
 
@@ -210,9 +215,9 @@ var MoveTo = function () {
 
 
   function _getOptionsFromTriggerDom(dom, options) {
-    var domOptions = {};
+    let domOptions = {};
     Object.keys(options).forEach(function (key) {
-      var value = dom.getAttribute("data-mt-".concat(kebabCase(key)));
+      let value = dom.getAttribute('data-mt-'.concat(kebabCase(key)));
 
       if (value) {
         domOptions[key] = isNaN(value) ? value : parseInt(value, 10);
@@ -230,9 +235,9 @@ if (typeof module !== 'undefined') {
   window.MoveTo = MoveTo;
 }
 
-const moveTo = new MoveTo ({
+const moveTo = new MoveTo({
   duration: 2000,
-  });
+});
 
 const trigger = document.querySelectorAll('.js-trigger');
 trigger.forEach(function (trigger) {

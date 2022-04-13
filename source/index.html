@@ -62,49 +62,40 @@
   </svg>
 
   <div class="overlay hidden"></div>
-  <header class="page-header">
-    <nav class="main-nav ">
-      <div class="container">
-        <div class="main-nav__menu-wrap">
-          <div class="main-nav__wrapper">
-            <a href="#" class="main-nav__logo">
-              <svg class="main-nav__icon-logo" width="70" height="38">
+  <header class="page-header page-header--closed">
+    <div class="page-header__nav-wrapper">
+      <nav class="page-header__main-nav main-nav">
+        <div class="page-header__logo-wrapper">
+          <div class="page-header__logo">
+            <a href="#" class="page-header__logolink">
+              <svg class="page-header__icon-logo" width="70" height="38">
                 <use xlink:href="#icon-logo"></use>
               </svg>
             </a>
-            <button class="main-nav__toggle" type="button">
-              <svg class="main-nav__icon-burger" width="25" height="20">
-                <use xlink:href="#icon-burger"></use>
-              </svg>
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
           </div>
-
-            <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--button main-nav__item--logo">
-                <a href="#" class="main-nav__logo">
-                  <svg class="main-nav__icon-logo-blue" width="42" height="22">
-                    <use xlink:href="#icon-logo"></use>
-                  </svg>
-                </a>
-                <a href="#advantages" aria-label="подробнее о Преимуществах" class="js-trigger">Преимущества</a>
-              </li>
-              <li class="main-nav__item main-nav__item--button">
-                <a href="#destination" aria-label="перейти к Направлениям" class="js-trigger">Направления</a>
-              </li>
-              <li class="main-nav__item main-nav__item--button">
-                <a href="#cruises" aria-label="перейти к круизам" class="js-trigger">Ближайшие круизы</a>
-              </li>
-              <li class="main-nav__item main-nav__item--button main-nav__item--margin" >
-                <a href="#contacts" aria-label="посмотреть Контакты" class="js-trigger">Контакты</a>
-              </li>
-            </ul>
+          <button class="main-nav__toggle page-header__toggle" type="button"><span class="visually-hidden">Открыть
+              меню</span></button>
         </div>
-      </div>
-    </nav>
-    <div class="page-header__intro container">
-      <h1>Круизы в&nbsp;Антарктику </h1>
-      <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
+
+        <ul class="page-header__list">
+          <li class="page-header__item">
+            <a href="#advantages" class="js-trigger">Преимущества</a>
+          </li>
+          <li class="page-header__item">
+            <a href="#booking" class="js-trigger">Направления</a>
+          </li>
+          <li class="page-header__item">
+            <a href="#catalog" class="js-trigger">Ближайшие круизы</a>
+          </li>
+          <li class="page-header__item">
+            <a href="#contacts" class="js-trigger">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="page-header__wrapper container">
+      <h1><span>Круизы</span> в Антарктику </h1>
+      <p><span>Волшебный мир</span> айсбергов и пингвинов</p>
     </div>
   </header>
 
