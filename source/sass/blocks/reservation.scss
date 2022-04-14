@@ -8,7 +8,6 @@
     flex-direction: column;
     align-items: center;
     padding-top: 0;
-    padding-left: 89px;
   }
 
   @media (max-width: $tablet-width) {
@@ -139,7 +138,7 @@
   padding: 11px 16px 11px 16px;
   max-width: 303px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   border-radius: 0;
 
 
@@ -164,16 +163,20 @@
   align-items: center;
   margin-bottom: 30px;
 
-  & p {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 27px;
+  }
+
+  & label {
     margin: 0;
     color: $light-grey;
     font-size: 10px;
     line-height: 13px;
-    margin-left: 6px;
     cursor: pointer;
+    position: relative;
 
     @media (max-width: $tablet-width) {
-      max-width: 156px;
+      max-width: 179px;
     }
   }
 
@@ -190,6 +193,63 @@
     }
   }
 }
+
+.reservation__checkbox {
+  width: 0;
+}
+
+.reservation__personal input + label {
+  padding-left: 23px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 27px;
+  }
+}
+
+.reservation__personal input:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -3px;
+  background-image: url("../img/icons/icon-checkbox-on.svg");
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+
+  @media (max-width: 767px) {
+    left: 0;
+    top: 5px;
+    background-image: url("../img/icons/icon-checkbox-on.svg");
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.reservation__personal input + label::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -5px;
+  background-image: url("../img/icons/icon-checkbox-off.svg");
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  @media (max-width: 767px) {
+    left: 0;
+    top: 0;
+    background-image: url("../img/icons/icon-checkbox-off.svg");
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.reservation__personal input:focus + label::after {
+  outline: 1px dashed $white;
+  outline-offset: 2px;
+}
+
 
 .reservation__button-submit input {
   color: $main-blue;

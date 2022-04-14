@@ -33,13 +33,13 @@
 }
 
 .page-header__nav-wrapper {
-  padding: 0 103px;
+  padding: 0 92px;
 
-  @media (max-width: 1023px) {
-    padding: 0 45px;
+  @media (max-width: $desktop-width) {
+    padding: 0 29px;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-width) {
     padding: 0;
   }
 }
@@ -73,6 +73,7 @@
 
   @media (max-width: 1023px) {
     margin-top: 15px;
+    padding-left: 17px;
   }
 
   @media (max-width: 767px) {
