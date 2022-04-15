@@ -174,8 +174,8 @@ overlay.addEventListener('click', function (e) {
 
   if (overlay.classList.contains('active')) {
 
-    burgerMenu.classList.remove('main-nav--opened');
-    burgerMenu.classList.add('main-nav--closed');
+    burgerMenu.classList.remove('page-header--opened');
+    burgerMenu.classList.add('page-header--closed');
     overlay.classList.add('hidden');
     overlay.classList.remove('active');
     body.classList.remove('overflow-hidden');
