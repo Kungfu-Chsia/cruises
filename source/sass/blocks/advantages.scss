@@ -91,7 +91,6 @@
   margin-bottom: 6px;
   word-wrap: break-word;
   position: relative;
-  // color: red;
 
   & br {
     display: none;
@@ -125,7 +124,7 @@
 
   @media (max-width: $tablet-width) {
     padding-bottom: 21px;
-    max-width: 255px;
+    max-width: 248px;
   }
 }
 

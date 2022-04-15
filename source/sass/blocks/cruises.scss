@@ -89,12 +89,11 @@
   position: absolute;
   max-width: 260px;
   max-height: 386px;
-  padding-left: 32px;
+  padding-left: 25px;
   width: 100%;
   display: none;
   top: 0;
   z-index: 3;
-  overflow-y: scroll;
   height: 100%;
 
   &:focus-within {
@@ -104,6 +103,7 @@
 
   @media (max-width: $desktop-width) {
     max-width: 309px;
+    padding-left: 36px;
   }
 
   @media (max-width: $tablet-width) {
@@ -137,7 +137,7 @@
     line-height: 18px;
     margin: 0;
     color: $light-grey;
-    padding-bottom: 16px;
+    padding-bottom: 14px;
 
     @media (max-width: $desktop-width) {
       font-size: 14px;
@@ -147,15 +147,12 @@
   }
 }
 
-.cruises__details span:last-child {
-  padding-bottom: 30px;
-}
-
 .cruises__details-button {
   color: $main-blue;
   background-color: $light-grey;
   padding: 10px 0;
   text-align: center;
+  margin-top: 12px;
   margin-bottom: 35px;
   display: block;
   max-width: 210px;
