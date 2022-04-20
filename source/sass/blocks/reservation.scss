@@ -1,17 +1,20 @@
 .reservation__container {
-  padding: 0 71px;
+  padding: 0 73px;
   display: flex;
   padding-top: 47px;
   justify-content: space-between;
 
   @media (max-width: $desktop-width) {
+    padding: 0 71px;
     flex-direction: column;
     align-items: center;
     padding-top: 0;
+    margin: 0 8px;
   }
 
   @media (max-width: $tablet-width) {
     padding: 0 15px;
+    margin: 0;
   }
 }
 
@@ -161,7 +164,11 @@
 .reservation__personal {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
 
   @media (max-width: $tablet-width) {
     margin-bottom: 27px;
@@ -253,6 +260,7 @@
 
 .reservation__button-submit input {
   color: $main-blue;
+  background-color: $light-grey;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
